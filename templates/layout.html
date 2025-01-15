@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ '/static/960.css'|url }}">
+  <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+  <title>{% block title %}Welcome{% endblock %} | Palikkatakomo</title>
+</head>
+<body>
+  <div id="phorum" class="container_12">
+    <div id="wrapper">
+      <div id="header" class="grid_10 prefix_1 suffix_1">
+        <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}" style="display:block; margin-left:auto; margin-right:auto"></a>
+        <p style="text-align:center; font-size:medium;">
+          {% for title, path in bag('main-nav').items() %}
+          <a href="{{ path | url }}">{{ title }}</a>&nbsp;|&nbsp;
+          {% endfor %}
+        </p>
+      </div>
+
+      <div id="blog" class="grid_10 prefix_1 suffix_1">
+      {% block body %}{% endblock %}
+      </div>
+
+
+      <div id="footer-plug" class="grid_8 prefix_2 suffix_2">
+        <p>Foorumin moottorina toimii <a href="http://www.phorum.org/">Phorum</a>. Sivupohja by <a href="http://www.scriptmonkeys.us/">Scriptmonkeys</a>. Hymiö © <a href="http://piecesofthings.blogspot.com/">Mr. Pony</a><br/>Palikkatakomo on harrastajien ylläpitämä sivusto. <a href="http://www.lego.com/">LEGO Group</a> ei sponsoroi sivustoa lainkaan.</p>
+      </div>
+
+      <div class="clear">&nbsp;</div>
+    </div>
+  </div>
+</body>
