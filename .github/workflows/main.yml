@@ -12,4 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pipx install lektor
-      - run: lektor build .
+      - name: Create output directory for Lektor
+        run: mkdir -p output
+      - name: Build site to output directory
+        run: lektor build --output-path ./output
