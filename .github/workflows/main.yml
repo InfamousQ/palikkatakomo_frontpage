@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - deploy
-      - 1-test-setup
 
 jobs:
   build:
