@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <h2>{{ this.title }}</h2>
+  {{ this.body }}
+{% endblock %}
+
+{% block subpages %}
+<div>
+	<ul class="nav">
+	{% for page in this.children %}
+  		<li><a href="{{ page|url }}">{{ page.title }}</a></li>
+	{% endfor %}
+	</ul>
+</div>
+{% endblock %}
