@@ -9,15 +9,20 @@
   <div id="phorum" class="container_12">
     <div id="wrapper">
       <div id="header" class="grid_10 prefix_1 suffix_1">
+        <div>
         <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}" style="display:block; margin-left:auto; margin-right:auto"></a>
-        <ul class="nav">
-          {% for title, path in bag('main-nav').items() %}
-          <li>
-            <a href="{{ path | url }}">{{ title }}</a>
-          </li>
+        </div>
+        <div class="nav">
+          {% for title, path in bag('main-nav', this.alt).items() %}
+          <div><a href="{{ path | url }}">{{ title }}</a></div>
           {% endfor %}
-        </ul>
+          <div>
+            {% if this.alt == 'en' %}<b>{% endif %}<a href="{{ '.' | url(alt='fi')}}">FI</a>{% if this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp; 
+            {% if this.alt == 'fi' %}<b>{% endif %}<a href="{{ '.' | url(alt='en')}}">EN</a>{% if this.alt == 'fi' %}</b>{% endif %}
+          </div>
+        </div>
       </div>
+
 
       <div id="blog" class="grid_10 prefix_1 suffix_1">
       {% block body %}{% endblock %}
