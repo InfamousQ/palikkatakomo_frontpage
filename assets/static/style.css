@@ -52,8 +52,8 @@ body {
 
 /** HEADER **/
 
-ul.nav {
+div.nav {
     display: flex;
     justify-content:space-around;
-    list-style-type:none;
+    padding-top: 1em;
 }
