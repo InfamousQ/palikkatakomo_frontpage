@@ -1,2 +1,12 @@
 [project]
 name = Palikkatakomo
+
+[alternatives.fi]
+name = Suomi
+primary = yes
+locale = fi_FI
+
+[alternatives.en]
+name = English
+url_prefix = /en/
+locale = en_US

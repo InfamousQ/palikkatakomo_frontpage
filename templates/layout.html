@@ -19,6 +19,16 @@
         </ul>
       </div>
 
+      <nav>
+        <div>
+          <ul>
+            <li><a href="{{ '.' | url(alt='fi')}}">Suomi</a></li>
+            <li><a href="{{ '.' | url(alt='en')}}">English</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
       <div id="blog" class="grid_10 prefix_1 suffix_1">
       {% block body %}{% endblock %}
       {% block subpages %}{% endblock %}
