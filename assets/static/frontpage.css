@@ -1,0 +1,30 @@
+h2 {
+    text-align: center;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
+li {
+    text-align: left;  
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 0;
+    text-align: left;
+}
+
+.parent {
+    margin-left: 7em;
+    margin-right: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}

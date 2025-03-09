@@ -1,36 +1,57 @@
 {% extends "layout.html" %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ '/static/frontpage.css'|url }}">
+{% endblock %}
+
 {% block body %}
 
-<div>
-	<img src="{{ '/images/palikka-iconi1-B.png' | url }}">
-	<h2>Mikä on Palikkatakomo?</h2>
-	<ul>
-		<li>Palikkatakomo on LEGO-harrastusta Suomessa edistävä yhteisö ja yhdistys.</li>
-		<li>Foorumi avautui vuonna 2008 ja yhdistys perustettiin 2012.</li>
-	</ul>
+<div class="parent">
+	<h2 style="text-align: center;">Tää ei oo keskellä</h2>
+	<div id="centered">
+		<ul>
+			<li>apuaaa</li>
+		</ul>
+	</div>
 </div>
 
-<div>
+<div class="parent">
+	<img src="{{ '/images/palikka-iconi1-B.png' | url }}">
+	<h2 style="text-align: center;">Mikä on Palikkatakomo?</h2>
+	<div id="centered">
+		<ul>
+			<li>Palikkatakomo on LEGO-harrastusta Suomessa edistävä yhteisö ja yhdistys.</li>
+			<li>Foorumi avautui vuonna 2008 ja yhdistys perustettiin 2012.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="parent">
 	<img src="{{ '/images/palikka-iconi2.png' | url }}">
 	<h2>Mitä Palikkatakomo tekee?</h2>
-	<ul>
-		<li>Mahdollistamme keskustelun erityisesti nettifoorumilla ja Discordissa.</li>
-		<li>Järjestämme innostavia rakennuskilpailuja ja tuemme jäsenten yhteisteosten toteuttamista LEGO-tapahtumiin.</li>
-		<li>Ylläpidämme aktiivista yhteyttä LEGO-yhtiöön ja muihin LEGO-yhdistyksiin.</li>
-	</ul>
+	<div id="centered">
+		<ul>
+			<li>Mahdollistamme keskustelun erityisesti nettifoorumilla ja Discordissa.</li>
+			<li>Järjestämme innostavia rakennuskilpailuja ja tuemme jäsenten yhteisteosten toteuttamista
+				LEGO-tapahtumiin.
+			</li>
+			<li>Ylläpidämme aktiivista yhteyttä LEGO-yhtiöön ja muihin LEGO-yhdistyksiin.</li>
+		</ul>
+	</div>
 </div>
 
-<div>
+<div class="parent">
 	<img src="{{ '/images/palikka-iconi3-b.png' | url }}">
 	<h2>Kuka voi liittyä yhteisöön?</h2>
+	<div id="centered">
 	<ul>
 		<li>Foorumilla voit osallistua keskusteluun ilman yhdistyksen jäsenyyttä, eikä ikärajaa ole.</li>
 		<li>Palikkatakomon jäseneksi yhdistykseen voi liittyä yli 15-vuotias LEGO-harrastaja.</li>
 	</ul>
+	</div>
 </div>
 
-<div>
+<div class="parent">
 	<img src="{{ '/images/palikka-iconi4.png' | url }}">
 	<h2>Miksi kannattaa liittyä?</h2>
 	<ul>
