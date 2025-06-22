@@ -55,5 +55,29 @@ body {
 div.nav {
     display: flex;
     justify-content:space-around;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    text-align: center;
+    margin-right: 0.1em;
+    margin-bottom: 1em;
+}
+
+#headerbutton:hover {
+    color:#2f2d92;
+}
+
+.headerbutton {
+    text-decoration: none;
+    background: #8a89ce;
+    padding: 0.5em;
+    border-radius: 0.4em;
+}
+
+.headerbutton:hover {
+    background: #7372b3;
+}
+
+.palikkatakomologo {
+    padding-bottom: 3em;
 }
