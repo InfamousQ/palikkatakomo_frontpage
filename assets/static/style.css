@@ -78,6 +78,14 @@ div.nav {
     background: #7372b3;
 }
 
+.headerbutton:visited {
+    color: black;
+}
+
+.headbutton:link {
+    color: black;
+}
+
 .palikkatakomologo {
     padding-bottom: 3em;
 }
