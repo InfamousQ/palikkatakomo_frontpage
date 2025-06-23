@@ -1,4 +1,5 @@
 <!doctype html>
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ '/static/960.css'|url }}">
@@ -6,12 +7,15 @@
   <title>{% block title %}{% endblock %}</title>
   {% block head %} {% endblock %}
 </head>
+
 <body>
   <div id="phorum" class="container_12">
     <div id="wrapper">
       <div id="header" class="grid_10 prefix_1 suffix_1">
         <div class="palikkatakomologo">
-        <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}" style="display:block; margin-left:auto; margin-right:auto"></a>
+          <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo"
+              src="{{ '/images/palikkatakomo_logo.jpg'|url }}"
+              style="display:block; margin-left:auto; margin-right:auto"></a>
         </div>
         <div class="nav">
 {# Loop through all items defined in databags/nav.ini #}
@@ -44,20 +48,25 @@
 
     {% endfor %}
           <div>
-            {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp; 
-            {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if this.alt == 'fi' %}</b>{% endif %}
+            {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
+              this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp;
+            {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if
+              this.alt == 'fi' %}</b>{% endif %}
           </div>
         </div>
       </div>
 
 
       <div id="blog" class="grid_10 prefix_1 suffix_1">
-      {% block body %}{% endblock %}
-      {% block subpages %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block subpages %}{% endblock %}
       </div>
 
       <div id="footer-plug" class="grid_8 prefix_2 suffix_2">
-        <p>Foorumin moottorina toimii <a href="http://www.phorum.org/">Phorum</a>. Sivupohja by <a href="http://www.scriptmonkeys.us/">Scriptmonkeys</a>. Hymiö © <a href="http://piecesofthings.blogspot.com/">Mr. Pony</a><br/>Palikkatakomo on harrastajien ylläpitämä sivusto. <a href="http://www.lego.com/">LEGO Group</a> ei sponsoroi sivustoa lainkaan.</p>
+        <p>Foorumin moottorina toimii <a href="http://www.phorum.org/">Phorum</a>. Sivupohja by <a
+            href="http://www.scriptmonkeys.us/">Scriptmonkeys</a>. Hymiö © <a
+            href="http://piecesofthings.blogspot.com/">Mr. Pony</a><br />Palikkatakomo on harrastajien ylläpitämä
+          sivusto. <a href="http://www.lego.com/">LEGO Group</a> ei sponsoroi sivustoa lainkaan.</p>
       </div>
 
       <div class="clear">&nbsp;</div>
