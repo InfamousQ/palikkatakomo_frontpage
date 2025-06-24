@@ -65,7 +65,7 @@ div.nav {
 
 .headerbutton {
     text-decoration: none;
-    background: #8a89ce;
+    background: #211f97;
     padding: 0.5em;
     border-radius: 0.4em;
 }
@@ -75,11 +75,11 @@ div.nav {
 }
 
 .headerbutton:visited {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .headerbutton:link {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .palikkatakomologo {
@@ -101,10 +101,10 @@ div.nav {
 
 .dropdownbtn {
     text-decoration: none;
-    background: #8a89ce;
+    background: #211f97;
     padding: 0.5em;
     border-radius: 0.4em;
-    color: black;
+    color: rgb(255, 255, 255);
     overflow: hidden;
     border: none;
     cursor: pointer;
