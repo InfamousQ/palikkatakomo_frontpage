@@ -2,6 +2,11 @@ h2 {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .centered {
     margin-left: auto;
     margin-right: auto;
@@ -27,4 +32,24 @@ ul {
     flex-direction: column;
     align-items: center;
     text-align: left;
+}
+
+.roundedPhoto {
+    border-radius: 1%;
+}
+
+.btn {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #2C2B7E;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 2% 5%;
+    border-radius: 5000px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.15);
 }
