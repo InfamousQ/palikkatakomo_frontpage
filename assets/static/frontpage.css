@@ -36,6 +36,7 @@ ul {
 
 .roundedPhoto {
     border-radius: 1%;
+    max-width: 90%;
 }
 
 .btn {
