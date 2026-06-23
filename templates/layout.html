@@ -41,11 +41,11 @@
       {% endif %}
 
       {# 3. Render the list item #}
-      <li>
-        <a href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+      <div>
+        <a class="headerbutton" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
           {{ nav_title }}
         </a>
-      </li>
+      </div>
 
     {% endfor %}
           <div>
