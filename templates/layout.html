@@ -19,22 +19,35 @@
               style="display:block; margin-left:auto; margin-right:auto"></a>
         </div>
         <div class="nav">
-          {% for title, path in bag('main-nav', this.alt).items() %}
-          <div><a class="headerbutton" href="{{ path | url }}">{{ title }}</a></div>
-          {% endfor %}
-          
-          
-          <div class="dropdown">
-            <a class="dropdownbtn"> Harrastajalle </a>
-            <div class="dropdown-content">
-              <a href="#"> Moduverse </a>
-              <a href="#"> Irtopalikat </a>
-              <a href="#"> Pesuvinkit </a>
-              <a href="#"> Linkit </a>
-            </div>
-          </div>
-          
+{# Loop through all items defined in databags/nav.ini #}
+    {% for key, item in bag('main-nav').items() %}
+      
+      {# 1. Determine the correct title based on the active language alternative #}
+      {% if this.alt == 'en' %}
+        {% set nav_title = item.title_en %}
+      {% else %}
+        {% set nav_title = item.title_fi %}
+      {% endif %}
 
+      {# 2. Determine the target URL #}
+      {% if item.url %}
+        {# It's an external link, use it directly #}
+        {% set nav_url = item.url %}
+        {% set is_external = true %}
+      {% else %}
+        {# It's an internal path, resolve it safely with language awareness #}
+        {% set nav_url = url_to(item.path, alt=this.alt) %}
+        {% set is_external = false %}
+      {% endif %}
+
+      {# 3. Render the list item #}
+      <div>
+        <a class="headerbutton" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {{ nav_title }}
+        </a>
+      </div>
+
+    {% endfor %}
           <div>
             {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
               this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp;

@@ -6,43 +6,56 @@
 
 {% block body %}
 
-<div class="parent">
-	<img class="roundedPhoto" src="{{ '/images/2025_PiiPoo_Tampere_HD.jpg' | url }}">
-	<h2 style="text-align: center;">Mikä on Palikkatakomo?</h2>
-	<div id="centered">
-		<ul>
-			<li>Palikkatakomo on LEGO-harrastusta Suomessa edistävä yhteisö ja yhdistys.</li>
-			<li>Foorumilla voit osallistua keskusteluun ilman yhdistyksen jäsenyyttä, eikä ikärajaa ole.</li>
-			<li>Palikkatakomon jäseneksi yhdistykseen voi liittyä yli 15-vuotias LEGO-harrastaja (20e/kalenterivuosi).</li>
-		</ul>
-		
-	</div>
-	<a href="mailto:yhdistys@palikkatakomo.org?subject=Jäsenhakemus" class="btn btn--contact">Jäseneksi</a>
-</div>
+<div id="frontpage">
 
-<div class="parent">
-	<img class="roundedPhoto" src="{{ '/images/SaaristohistoriaSeinäjoki_25_HD.jpg' | url }}">
-	<h2>Mitä Palikkatakomo tekee?</h2>
-	<div id="centered">
+	<div>
+		<img src="{{ '/images/2025_PiiPoo_Tampere_HD.jpg' | url }}">
+		<h2>Mikä on Palikkatakomo?</h2>
+		<div>
+			<ul>
+				<li>Palikkatakomo on LEGO-harrastusta Suomessa edistävä yhteisö ja yhdistys.</li>
+				<li>Foorumilla voit osallistua keskusteluun ilman yhdistyksen jäsenyyttä, eikä ikärajaa ole.</li>
+				<li>Palikkatakomon jäseneksi yhdistykseen voi liittyä yli 15-vuotias LEGO-harrastaja (20e/kalenterivuosi).</li>
+			</ul>
+			
+		</div>
+		<a href="mailto:yhdistys@palikkatakomo.org?subject=Jäsenhakemus" class="btn btn--contact">Jäseneksi</a>
+	</div>
+
+	<div clss="parent">
+		<img src="{{ '/images/SaaristohistoriaSeinäjoki_25_HD.jpg' | url }}">
+		<h2>Mitä Palikkatakomo tekee?</h2>
+		<div>
+			<ul>
+				<li>Osallistumme LEGO-tapahtumiin</li>
+				<li>Mahdollistamme keskustelun erityisesti nettifoorumilla ja Discordissa.</li>
+				<li>Järjestämme innostavia rakennuskilpailuja ja tuemme jäsenten yhteisteosten toteuttamista
+					LEGO-tapahtumiin.
+				</li>
+				<li>Ylläpidämme aktiivista yhteyttä LEGO-yhtiöön ja muihin LEGO-yhdistyksiin.</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="parent">
+		<img src="{{ '/images/palikka-iconi3-b.png' | url }}">
+		<h2>Who can join the community?</h2>
 		<ul>
-			<li>Osallistumme LEGO-tapahtumiin</li>
-			<li>Mahdollistamme keskustelun erityisesti nettifoorumilla ja Discordissa.</li>
-			<li>Järjestämme innostavia rakennuskilpailuja ja tuemme jäsenten yhteisteosten toteuttamista
-				LEGO-tapahtumiin.
-			</li>
-			<li>Ylläpidämme aktiivista yhteyttä LEGO-yhtiöön ja muihin LEGO-yhdistyksiin.</li>
+			<li>Anyone can join our forum, you do not need to be a member of association and there is no age limit</li>
+			<li>Any LEGO hobbyist over 15 years old can join Palikkatakomo association</li>
 		</ul>
 	</div>
-</div>
 
-<div class="parent" style="margin-top: 5%;">
-	<img class="roundedPhoto" src="{{ '/images/2024_PiiPoo_Helsinki_HD.jpg' | url }}">
-	<h2>Miksi kannattaa liittyä?</h2>
-	<ul>
-		<li>Saat inspiroivaa, kannustavaa ja asiantuntevaa seuraa LEGO-aiheisiin keskusteluihin.</li>
-		<li>Mahdollisuus osallistua Palikkatakomon yhteisteoksiin tapahtumissa.</li>
-		<li>Liittyessäsi saat käyttöoikeuden Palikkatakomon kuvagalleriaan.</li>
-		<li>Tuet LEGO harrastuksen edistämissä Suomessa</li>
-	</ul>
+	<div class="parent">
+		<img src="{{ '/images/2024_PiiPoo_Helsinki_HD.jpg' | url }}">
+		<h2>Miksi kannattaa liittyä?</h2>
+		<ul>
+			<li>Saat inspiroivaa, kannustavaa ja asiantuntevaa seuraa LEGO-aiheisiin keskusteluihin.</li>
+			<li>Mahdollisuus osallistua Palikkatakomon yhteisteoksiin tapahtumissa.</li>
+			<li>Liittyessäsi saat käyttöoikeuden Palikkatakomon kuvagalleriaan.</li>
+			<li>Tuet LEGO harrastuksen edistämissä Suomessa</li>
+		</ul>
+	</div>
+
 </div>
 {% endblock %}
