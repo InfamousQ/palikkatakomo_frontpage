@@ -90,47 +90,47 @@ div.nav {
     margin-top: 5em;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+div#frontpage {
+
+	h2 {
+		text-align: center;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		margin-left: 0;
+		text-align: left;
+	}
+
+	div {
+		margin-left: 7em;
+		margin-right: 7em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: left;
+	}
+
+	div img {
+		border-radius: 1%;
+		max-width: 90%;
+	}
+
+	.btn {
+		margin-top: 5%;
+		margin-bottom: 5%;
+		background-color: #2C2B7E;
+		font-size: 1.5rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		padding: 2% 5%;
+		border-radius: 5000px;
+		transition: all 0.3s;
+	}
+
+	.btn:hover {
+		transform: scale(1.15);
+	}
+
 }
-
-.dropdown {
-    float: left;
-    
-}
-
-.dropdownbtn {
-    text-decoration: none;
-    background: #211f97;
-    padding: 0.5em;
-    border-radius: 0.4em;
-    color: rgb(255, 255, 255);
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-    
-  }
-  
-  .dropdown-content {
-    
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    display: block;
-    float: none;
-    color: black;
-    text-decoration: none;
-    padding: 12px 16px;
-    text-align: left;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
