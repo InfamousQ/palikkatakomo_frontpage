@@ -1,36 +1,73 @@
 <!doctype html>
+
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="{{ '/static/960.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
   <title>{% block title %}{% endblock %}</title>
+  {% block head %} {% endblock %}
 </head>
+
 <body>
   <div id="phorum" class="container_12">
     <div id="wrapper">
       <div id="header" class="grid_10 prefix_1 suffix_1">
-        <div>
-        <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}" style="display:block; margin-left:auto; margin-right:auto"></a>
+        <div class="palikkatakomologo">
+          <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo"
+              src="{{ '/images/palikkatakomo_logo.jpg'|url }}"
+              style="display:block; margin-left:auto; margin-right:auto"></a>
         </div>
         <div class="nav">
-          {% for title, path in bag('main-nav', this.alt).items() %}
-          <div><a href="{{ path | url }}">{{ title }}</a></div>
-          {% endfor %}
+{# Loop through all items defined in databags/nav.ini #}
+    {% for key, item in bag('main-nav').items() %}
+      
+      {# 1. Determine the correct title based on the active language alternative #}
+      {% if this.alt == 'en' %}
+        {% set nav_title = item.title_en %}
+      {% else %}
+        {% set nav_title = item.title_fi %}
+      {% endif %}
+
+      {# 2. Determine the target URL #}
+      {% if item.url %}
+        {# It's an external link, use it directly #}
+        {% set nav_url = item.url %}
+        {% set is_external = true %}
+      {% else %}
+        {# It's an internal path, resolve it safely with language awareness #}
+        {% set nav_url = url_to(item.path, alt=this.alt) %}
+        {% set is_external = false %}
+      {% endif %}
+
+      {# 3. Render the list item #}
+      <div>
+        <a class="headerbutton" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {{ nav_title }}
+        </a>
+      </div>
+
+    {% endfor %}
           <div>
-            {% if this.alt == 'en' %}<b>{% endif %}<a href="{{ '.' | url(alt='fi')}}">FI</a>{% if this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp; 
-            {% if this.alt == 'fi' %}<b>{% endif %}<a href="{{ '.' | url(alt='en')}}">EN</a>{% if this.alt == 'fi' %}</b>{% endif %}
+            {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
+              this.alt == 'en' %}</b>{% endif %}&nbsp;|&nbsp;
+            {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if
+              this.alt == 'fi' %}</b>{% endif %}
           </div>
         </div>
       </div>
 
 
       <div id="blog" class="grid_10 prefix_1 suffix_1">
-      {% block body %}{% endblock %}
-      {% block subpages %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block subpages %}{% endblock %}
       </div>
 
       <div id="footer-plug" class="grid_8 prefix_2 suffix_2">
-        <p>Foorumin moottorina toimii <a href="http://www.phorum.org/">Phorum</a>. Sivupohja by <a href="http://www.scriptmonkeys.us/">Scriptmonkeys</a>. Hymiö © <a href="http://piecesofthings.blogspot.com/">Mr. Pony</a><br/>Palikkatakomo on harrastajien ylläpitämä sivusto. <a href="http://www.lego.com/">LEGO Group</a> ei sponsoroi sivustoa lainkaan.</p>
+        <p>Foorumin moottorina toimii <a href="http://www.phorum.org/">Phorum</a>. Sivupohja by <a
+            href="http://www.scriptmonkeys.us/">Scriptmonkeys</a>. Hymiö © <a
+            href="http://piecesofthings.blogspot.com/">Mr. Pony</a><br />Palikkatakomo on harrastajien ylläpitämä
+          sivusto. <a href="http://www.lego.com/">LEGO Group</a> ei sponsoroi sivustoa lainkaan.</p>
       </div>
 
       <div class="clear">&nbsp;</div>
