@@ -1,13 +1,10 @@
 {% extends "layout.html" %}
 
-{% block head %}
-<link rel="stylesheet" href="{{ '/static/frontpage.css'|url }}">
-{% endblock %}
 {% block body %}
 <div id="frontpage">
 
 	<div>
-		<img src="{{ '/images/2025_PiiPoo_Tampere_HD.jpg' | url }}">
+		<img src="{{ '/images/frontpage/section-1.png' | url }}">
 		<h2>What is Palikkatakomo?</h2>
 		<ul>
 			<li>Palikkatakomo is a community and association in Finland which purpose is to develop LEGO hobby in Finland.</li>
@@ -16,7 +13,7 @@
 	</div>
 
 	<div>
-		<img src="{{ '/images/SaaristohistoriaSeinäjoki_25_HD.jpg' | url }}">
+		<img src="{{ '/images/frontpage/section-2.png' | url }}">
 		<h2>What does Palikkatakomo do?</h2>
 		<ul>
 			<li>We provide discussion platforms in our forums and in Discord.</li>
@@ -26,7 +23,7 @@
 	</div>
 
 	<div>
-		<img src="{{ '/images/palikka-iconi3-b.png' | url }}">
+		<img src="{{ '/images/frontpage/section-3.png' | url }}">
 		<h2>Who can join the community?</h2>
 		<ul>
 			<li>Anyone can join our forum, you do not need to be a member of association and there is no age limit</li>
@@ -35,7 +32,7 @@
 	</div>
 
 	<div>
-		<img src="{{ '/images/2024_PiiPoo_Helsinki_HD.jpg' | url }}">
+		<img src="{{ '/images/frontpage/section-4.png' | url }}">
 		<h2>Why to join?</h2>
 		<ul>
 			<li>You meet inspiring, supporting and knowledgeable people to discuss all thing LEGO.</li>
@@ -43,6 +40,7 @@
 			<li>You can store your LEGO pictures to our photo gallery</li>
 			<li>You support the LEGO hobbyist scene in Finland</li>
 		</ul>
+		<a href="mailto:yhdistys@palikkatakomo.org?subject=Jäsenhakemus" class="btn btn--contact">Jäseneksi</a>
 	</div>
 </div>
 {% endblock %}
