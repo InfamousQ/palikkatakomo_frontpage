@@ -1,0 +1,14 @@
+<div class="hero">
+{%- if this.images and this.images.strip() -%}
+{%- for line in this.images.split("\n") -%}
+	{%- if line.strip() -%}
+		{%- set parts = line.split('|') -%}
+		{%- set img_url = parts[0].strip() -%}
+		{%- set img_alt = parts[1].strip() if parts|length > 1 else "" -%}
+	<img src="{{ img_url|url }}" alt="{{ img_alt }}">
+	{%- endif -%}
+{%- endfor -%}
+{%- else -%}
+	<p><em>No images in this hero section</em></p>
+{%- endif -%}
+</div>

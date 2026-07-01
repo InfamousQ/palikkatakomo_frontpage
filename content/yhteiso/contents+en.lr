@@ -1,7 +1,42 @@
 _slug: community
 ---
+_model: flowpage
+---
 title: Community
 ---
 body:
 
-This is info text about Palikkatakomo community and LUG.
+#### hero ####
+images:
+section-1.jpg | Palikkatakomo members
+
+#### markdown ####
+content:
+Palikkatakomo is community for Finland's LEGO hobbyists which has been running since 2008. Community is free and open for everyone. The heart of the community is Palikktakomo's forum and the community has grown from that to other social media platforms. In addition to forum and social media platforms, Palikkatakomo community participates in events and in LEGO displays.
+Anyone can join Palikkatakomo community by joining our free forum. As part of our community, you can:
+* Participate in LEGO related discussions and get to know other hobbyists around Finland
+* Participate building competitions and collaborative group builds
+* Get fresh info on events and displays that Palikkatakomo is organizing
+* Participate in Palikkatakomo's displays.
+
+#### markdown ####
+content:
+Palikkatakomo community is supported by Palikkatakomo ry, registered association, which main goal is to develop LEGO hobby in Finland. Palikkatakomo ry organizes the events, displays, competitions and group orders and supports the members of Palikkatakomo ry and Palikkatakomo community in their hobby. Palikkatakomo ry is recognised LUG (LEGO User Group) and association collaborates with LEGO Group.
+Anyone over the age of 15 can apply for membership of Palikkatakomo ry association. You must approve the rules of the association and be ready to pay annual memybership fee (20 €). Membership fee is collected annually. As a member of Palikkatakomo ry, you can
+* Use Palikkatakomo ry photo gallery
+* Get discounts from partners 
+* Participate in group orders
+
+#### hero ####
+images:
+section-5.jpg | Palikkatakomo in events
+
+#### markdown ####
+content:
+## Palikkatakomo in events
+How to recognise Palikktakomo ry members in events? Our members participage in several LEGO events around Finland. We try to coordinate our tables in events so that all the members are close together. More the merrier! Here are some ways how to find Palikkatakomo ry members in events:
+* Some of our members have Palikkatakomo -t-shirt
+* You can see beach flags and banners with our Palikkatakomo logo
+* You can find our logo in the our tables in the LEGO creation description sheets
+
+Feel free to come and say hi to our members! We are eager tell about our hobby, the events and about our community and association. See you at events!

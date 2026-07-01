@@ -1,8 +1,11 @@
-
+_model: flowpage
+---
 title: Linkit
 ---
 body:
 
+#### markdown ####
+content:
 ### Yleisiä LEGO sivustoja
 
 * **[Basebrick](https://www.basebrick.com/)** - Suomalainen setti- ja osatietokanta
@@ -13,26 +16,33 @@ body:
 * **[The Brothers Brick](https://www.brothers-brick.com/)** - Jo käsitteeksi muodostunut, hyvin aktiivinen blogi on ikkuna LEGO harrastukseen, aina hienoista teoksista uusimpiin setteihin.
 * **[WikiPalikka](https://fi.lego.wikia.com/wiki/Etusivu)** - Suomalainen LEGO-harrastukseen pyhitetty wiki
 
+#### markdown ####
+content:
 ### Kauppapaikkoja
 
 * **[Bricklink](https://www.bricklink.com/)** - Osta ja myy palikoita suoraan toisilta rakentajilta
 * **[Huuto.net](https://www.huuto.net/osasto/lastentarvikkeet/legot/827)** - Suomalainen verkkohuutokauppa
 * **[Panttilan Palikka](https://panttilanpalikka.sumupstore.com/)** - Suomalainen LEGO verkkokauppa
 
+#### markdown ####
+content:
 ### Keskustelupalstoja
 
 * **[Classic Castle](https://www.classic-castle.com/)** - Keskiaika-aiheinen foorumi
 * **[Eurobricks](https://www.eurobricks.com/forum/)** 
 * **[From Bricks to Bothan](https://www.fbtb.net/)** - Star Wars -teemainen foorumi
-  
+
+#### markdown ####
+content:
 ### Rakennusohjeita
 
 * **[BrickFactory](https://www.brickfactory.info/)** - Laajin kokoelman rakennusohjeita
 * **[Swooshablen Building School](https://swooshable.com/buildingschool/)** - Kasvava kokoelma harrastajien tekemiä rakennusohjeita
 
+#### markdown ####
+content:
 ### Harrastajien kotisivuja
 
 * **[Cyclopic Bricks](https://cyclopicbricks.blogspot.com/)** - Foorumimme jäsenen, Eeron, blogi
 * **[HOViNET tiimin kotisivut](http://hovinet.com/)** - Suomalainen animaatiotiimi
 * **[Legoridesin kotisivut](https://l-rides.com/)** - Tivolilaitteita LEGO palikoista rakennettuna
----
