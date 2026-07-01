@@ -3,7 +3,7 @@ name: Generate site and push to Github Pages
 on:
   push:
     branches:
-      - deploy
+      - staging
 
 jobs:
   build:
