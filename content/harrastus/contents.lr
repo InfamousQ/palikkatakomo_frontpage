@@ -12,6 +12,28 @@ content:
 * Retro-settien ja avaamattomien settien keräily
 * Settien osto ja myynti muiden harrastajien välillä
 
+#### testimonials ####
+testimonials:
+
+##### testimonial #####
+image: image.url
+-----
+style: left
+-----
+name: T testimonial
+-----
+url: http://given_url.html
+
+##### testimonial #####
+image: imagee2.url
+-----
+style: rigt
+-----
+name: L testimonial
+-----
+url: http://given_url_2.html
+
+
 #### markdown ####
 content:
 ### Rakentaminen
