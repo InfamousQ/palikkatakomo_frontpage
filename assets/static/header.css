@@ -1,0 +1,42 @@
+/** HEADER **/
+
+#header {
+    margin: 0px auto 15px auto;
+    position: relative;
+    border-top: none;
+    color: #CCCCCC;
+}
+
+div.nav {
+    display: flex;
+    justify-content:space-around;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    text-align: center;
+    margin-right: 0.1em;
+    margin-bottom: 1em;
+}
+
+.headerbutton {
+    text-decoration: none;
+    background: #211f97;
+    padding: 0.5em;
+    border-radius: 0.4em;
+}
+
+.headerbutton:hover, .dropdownbtn:hover {
+    background: #7372b3;
+}
+
+.headerbutton:visited {
+    color: rgb(255, 255, 255);
+}
+
+.headerbutton:link {
+    color: rgb(255, 255, 255);
+}
+
+.palikkatakomologo {
+    padding-bottom: 3em;
+}
