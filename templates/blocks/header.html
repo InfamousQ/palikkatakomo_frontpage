@@ -1,41 +1,41 @@
-<div id="header" class="grid_10 prefix_1 suffix_1">
-    <div class="palikkatakomologo">
-        <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo"
-                src="{{ '/images/palikkatakomo_logo.jpg'|url }}"
-                style="display:block; margin-left:auto; margin-right:auto"></a>
+<script defer src="{{ '/static/header.js'|url }}"></script>
+
+<nav class="nav-burger">
+    <div class = "language-switch-buttons">
+        {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
+            this.alt == 'fi' %}</b>{% endif %}&nbsp;|&nbsp;
+        {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if
+            this.alt == 'en' %}</b>{% endif %}
     </div>
-    <div class="nav">
-        {#- Loop through all items defined in databags/nav.ini -#}
-        {%- for key, item in bag('main-nav').items() -%}
-        {#- 1. Determine the correct title based on the active language alternative -#}
-        {%- if this.alt == 'en' -%}
-        {%- set nav_title = item.title_en -%}
-        {%- else -%}
-        {%- set nav_title = item.title_fi -%}
-        {%- endif -%}
-        {#- 2. Determine the target URL -#}
-        {%- if item.url -%}
-        {#- It's an external link, use it directly -#}
-        {%- set nav_url = item.url -%}
-        {%- set is_external = true -%}
-        {%- else -%}
-        {#- It's an internal path, resolve it safely with language awareness -#}
-        {%- set nav_url = url_to(item.path, alt=this.alt) -%}
-        {%- set is_external = false -%}
-        {%- endif -%}
-        {#- 3. Render the list item -#}
-        <div>
-            <a class="headerbutton" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"
+    <div class="ham-menu-contents">
+            {#- Loop through all items defined in databags/nav.ini -#}
+            {%- for key, item in bag('main-nav').items() -%}
+            {#- 1. Determine the correct title based on the active language alternative -#}
+            {%- if this.alt == 'en' -%}
+            {%- set nav_title = item.title_en -%}
+            {%- else -%}
+            {%- set nav_title = item.title_fi -%}
+            {%- endif -%}
+            {#- 2. Determine the target URL -#}
+            {%- if item.url -%}
+            {#- It's an external link, use it directly -#}
+            {%- set nav_url = item.url -%}
+            {%- set is_external = true -%}
+            {%- else -%}
+            {#- It's an internal path, resolve it safely with language awareness -#}
+            {%- set nav_url = url_to(item.path, alt=this.alt) -%}
+            {%- set is_external = false -%}
+            {%- endif -%}
+            {#- 3. Render the list item -#}
+            <a class="contents-button" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"
                 {% endif %}>
                 {{ nav_title }}
             </a>
-        </div>
-        {%- endfor -%}
-        <div>
-            {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
-                this.alt == 'fi' %}</b>{% endif %}&nbsp;|&nbsp;
-            {% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if
-                this.alt == 'en' %}</b>{% endif %}
-        </div>
+            {%- endfor -%}
     </div>
-</div>
+    <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
