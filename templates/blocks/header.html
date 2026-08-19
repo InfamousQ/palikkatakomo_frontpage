@@ -1,6 +1,10 @@
 <script defer src="{{ '/static/header.js'|url }}"></script>
 
 <nav class="nav-burger">
+    <div class="palikkatakomologo">
+        <a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo"
+                src="{{ '/images/palikkatakomo_logo.jpg'|url }}"></a>
+    </div>
     <div class = "language-switch-buttons">
         {% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if
             this.alt == 'fi' %}</b>{% endif %}&nbsp;|&nbsp;

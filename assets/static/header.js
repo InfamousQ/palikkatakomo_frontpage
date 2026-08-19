@@ -9,6 +9,14 @@ hamMenu.addEventListener('click', () => {
     hamMenuContents.classList.toggle('active');
 })
 
+document.addEventListener('click', (event) => {
+    if (!hamMenuContents.classList.contains('active')) return;
+    if (hamMenuContents.contains(event.target) || hamMenu.contains(event.target)) return;
+
+    hamMenu.classList.remove('active');
+    hamMenuContents.classList.remove('active');
+})
+
 const updateHeaderVars = () => {
     document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
     
