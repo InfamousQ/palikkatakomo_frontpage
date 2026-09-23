@@ -11,6 +11,19 @@
 
 <div id="frontpage">
 
+	{# --- Prototype scaffold: comparing hero directions before picking one. Remove #hero-v2 once decided. --- #}
+	<div id="hero-v2">
+		<img class="hero-v2-bg" src="{{ '/images/frontpage/hero-train-bleed.webp' | url }}" alt="">
+		<div class="hero-v2-scrim"></div>
+		<div class="hero-v2-content">
+			<p class="hero-v2-intro">Palikkatakomo on Suomen LEGO-harrastajien kohtaamispaikka.</p>
+			<div class="cta-group cta-group--v2">
+				<a class="btn btn--primary" href="{{ url_to('/yhteiso', alt=this.alt) }}">Tutustu Palikkatakomoon</a>
+				<a class="btn btn--secondary-v2" href="{{ url_to('/harrastus', alt=this.alt) }}">Lue harrastuksesta</a>
+			</div>
+		</div>
+	</div>
+
 	<div id="hero">
 		<div class="hero-media">
 			<img src="{{ '/images/frontpage/hero-sakura.webp' | url }}" alt="Palikkatakomon jäsenen rakentama Sakura-aiheinen LEGO-mosaiikkiteos">

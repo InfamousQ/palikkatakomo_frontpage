@@ -17,6 +17,77 @@ div#frontpage {
 		font-family: var(--tk-font-display);
 	}
 
+	/* --- Prototype scaffold: full-bleed hero variant (option B), kept separate
+	   from #hero (option A) for side-by-side comparison. Remove whichever loses. --- */
+	#hero-v2 {
+		margin: 0;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: flex-start;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		isolation: isolate;
+
+		.hero-v2-bg {
+			position: absolute;
+			inset: 0;
+			margin: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			border-radius: 0;
+			display: block;
+		}
+
+		.hero-v2-scrim {
+			position: absolute;
+			inset: 0;
+			margin: 0;
+			z-index: 1;
+			display: block;
+			background: linear-gradient(0deg, rgba(20, 19, 60, 0.92) 0%, rgba(20, 19, 60, 0.92) 55%, rgba(20, 19, 60, 0.05) 92%);
+		}
+
+		.hero-v2-content {
+			position: relative;
+			z-index: 2;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1em;
+			padding: 2em 2em 2.5em;
+			max-width: 34em;
+			text-align: left;
+		}
+
+		.hero-v2-intro {
+			margin: 0;
+			font-family: var(--tk-font-display);
+			font-weight: 800;
+			font-size: clamp(1.5rem, 2.5vw + 0.75rem, 2.25rem);
+			line-height: 1.2;
+			letter-spacing: -0.01em;
+			text-wrap: balance;
+			color: #fff;
+		}
+
+		.btn.btn--secondary-v2 {
+			background-color: transparent;
+			color: #fff;
+			border: 2px solid #fff;
+		}
+
+		.btn.btn--secondary-v2:hover {
+			background-color: #fff;
+			color: var(--tk-navy-deep);
+		}
+	}
+
 	#hero {
 		margin: 0;
 		display: flex;
