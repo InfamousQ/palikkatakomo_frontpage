@@ -1,12 +1,28 @@
 {% extends "layout.html" %}
 
 {% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/static/frontpage.css'|url }}">
 {% endblock %}
 
 {% block body %}
 
 <div id="frontpage">
+
+	<div id="hero">
+		<div class="hero-media">
+			<img src="{{ '/images/frontpage/hero-sakura.webp' | url }}" alt="Palikkatakomon jäsenen rakentama Sakura-aiheinen LEGO-mosaiikkiteos">
+		</div>
+		<div class="hero-content">
+			<h1 class="hero-intro">Palikkatakomo on Suomen LEGO-harrastajien kohtaamispaikka vuodesta 2008.</h1>
+			<div class="cta-group">
+				<a class="btn btn--primary" href="{{ url_to('/yhteiso', alt=this.alt) }}">Tutustu Palikkatakomoon</a>
+				<a class="btn btn--secondary" href="{{ url_to('/harrastus', alt=this.alt) }}">Lue harrastuksesta</a>
+			</div>
+		</div>
+	</div>
 
 	<div>
 		<img src="{{ '/images/frontpage/section-1.png' | url }}">

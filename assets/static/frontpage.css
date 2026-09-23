@@ -1,7 +1,128 @@
 div#frontpage {
 
+	/* Frontpage-scoped palette (not :root) — kept local to this section
+	   while the palette is under review; see the frontpage refresh plan. */
+	--tk-navy: #211f5e;
+	--tk-navy-deep: #14133c;
+	--tk-amber: #ffa333;
+	--tk-amber-deep: #c97a12;
+	--tk-mist: #f5f5f9;
+	--tk-font-display: "Archivo", system-ui, sans-serif;
+	--tk-font-body: "Work Sans", system-ui, sans-serif;
+
+	font-family: var(--tk-font-body);
+
 	h2 {
 		text-align: center;
+		font-family: var(--tk-font-display);
+	}
+
+	#hero {
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5em;
+		padding: 1.5em;
+		background-color: #ffffff;
+
+		/* Overrides for the generic "div#frontpage div" rule below, scoped
+		   via the #frontpage/#hero ids so they win on specificity without !important.
+		   Basis/max-width sized to sit side-by-side within the current fixed-width
+		   960.css wrapper (~780px content column) rather than stacking tall. */
+		& > div {
+			margin: 0;
+			display: block;
+			min-width: 0;
+			flex: 1 1 300px;
+			max-width: 22em;
+		}
+
+		.hero-media img {
+			display: block;
+			width: 100%;
+			aspect-ratio: 4 / 3;
+			object-fit: cover;
+			border-radius: 0.75em;
+			max-width: 100%;
+		}
+
+		.hero-content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1em;
+		}
+
+		.hero-intro {
+			margin: 0;
+			font-family: var(--tk-font-display);
+			font-weight: 800;
+			font-size: clamp(1.3rem, 2vw + 0.65rem, 1.75rem);
+			line-height: 1.2;
+			letter-spacing: -0.01em;
+			text-wrap: balance;
+			color: var(--tk-navy);
+		}
+	}
+
+	.cta-group {
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		gap: 1em;
+		width: 100%;
+	}
+
+	.cta-group .btn {
+		margin: 0;
+		font-family: var(--tk-font-body);
+		font-size: 1rem;
+		font-weight: 600;
+		text-transform: none;
+		letter-spacing: normal;
+		border-radius: 0.6em;
+		padding: 0.85em 1.75em;
+		text-align: center;
+		text-decoration: none;
+		flex: 1 1 auto;
+		transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+	}
+
+	.cta-group .btn:hover {
+		transform: translateY(-2px);
+	}
+
+	.btn.btn--primary {
+		background-color: var(--tk-amber);
+		color: var(--tk-navy-deep);
+		border: 2px solid var(--tk-amber);
+	}
+
+	.btn.btn--primary:hover {
+		background-color: var(--tk-amber-deep);
+		border-color: var(--tk-amber-deep);
+	}
+
+	.btn.btn--secondary {
+		background-color: transparent;
+		color: var(--tk-navy);
+		border: 2px solid var(--tk-navy);
+	}
+
+	.btn.btn--secondary:hover {
+		background-color: var(--tk-navy);
+		color: #fff;
+	}
+
+	.btn:focus-visible {
+		outline: 3px solid var(--tk-navy);
+		outline-offset: 2px;
 	}
 
 	ul {
