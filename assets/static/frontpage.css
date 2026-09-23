@@ -17,6 +17,87 @@ div#frontpage {
 		font-family: var(--tk-font-display);
 	}
 
+	/* --- Prototype scaffold: photo-collage hero variant (option C), kept separate
+	   from #hero and #hero-v2 for side-by-side comparison. Remove whichever loses. --- */
+	#hero-v3 {
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5em;
+		padding: 1.5em;
+		background-color: #ffffff;
+
+		& > div {
+			margin: 0;
+			display: block;
+			min-width: 0;
+			flex: 1 1 300px;
+			max-width: 22em;
+		}
+
+		.hero-v3-collage {
+			position: relative;
+			aspect-ratio: 4 / 3;
+		}
+
+		.collage-tile {
+			position: absolute;
+			display: block;
+			object-fit: cover;
+			border-radius: 0.6em;
+			border: 4px solid #fff;
+			box-shadow: 0 12px 28px rgba(20, 19, 60, 0.28);
+		}
+
+		.collage-tile--dock {
+			top: 0;
+			left: 0;
+			width: 68%;
+			height: 66%;
+			z-index: 1;
+			transform: rotate(-2deg);
+		}
+
+		.collage-tile--hogwarts {
+			bottom: 0;
+			right: 0;
+			width: 58%;
+			height: 56%;
+			z-index: 3;
+			transform: rotate(3deg);
+		}
+
+		.collage-tile--people {
+			top: 4%;
+			right: 0;
+			width: 40%;
+			height: 40%;
+			z-index: 2;
+			transform: rotate(-5deg);
+		}
+
+		.hero-v3-content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1em;
+		}
+
+		.hero-v3-intro {
+			margin: 0;
+			font-family: var(--tk-font-display);
+			font-weight: 800;
+			font-size: clamp(1.3rem, 2vw + 0.65rem, 1.75rem);
+			line-height: 1.2;
+			letter-spacing: -0.01em;
+			text-wrap: balance;
+			color: var(--tk-navy);
+		}
+	}
+
 	/* --- Prototype scaffold: full-bleed hero variant (option B), kept separate
 	   from #hero (option A) for side-by-side comparison. Remove whichever loses. --- */
 	#hero-v2 {

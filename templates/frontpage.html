@@ -11,7 +11,22 @@
 
 <div id="frontpage">
 
-	{# --- Prototype scaffold: comparing hero directions before picking one. Remove #hero-v2 once decided. --- #}
+	{# --- Prototype scaffold: comparing hero directions before picking one. Remove losing #hero-vN blocks once decided. --- #}
+	<div id="hero-v3">
+		<div class="hero-v3-collage">
+			<img class="collage-tile collage-tile--dock" src="{{ '/images/frontpage/hero-collage-dock.webp' | url }}" alt="Palikkatakomon Saaristohistoriaa -yhteisteoksen laituri- ja satamamiljöö Toppilasta">
+			<img class="collage-tile collage-tile--hogwarts" src="{{ '/images/frontpage/hero-collage-hogwarts.webp' | url }}" alt="Palikkatakomon jäsenen rakentama Tylypahkan torni">
+			<img class="collage-tile collage-tile--people" src="{{ '/images/frontpage/hero-collage-people.webp' | url }}" alt="Palikkatakomon jäsen juhlimassa palkintoa Klotsimöll-tapahtumassa">
+		</div>
+		<div class="hero-v3-content">
+			<p class="hero-v3-intro">Palikkatakomo on Suomen LEGO-harrastajien kohtaamispaikka.</p>
+			<div class="cta-group cta-group--v3">
+				<a class="btn btn--primary" href="{{ url_to('/yhteiso', alt=this.alt) }}">Tutustu Palikkatakomoon</a>
+				<a class="btn btn--secondary" href="{{ url_to('/harrastus', alt=this.alt) }}">Lue harrastuksesta</a>
+			</div>
+		</div>
+	</div>
+
 	<div id="hero-v2">
 		<img class="hero-v2-bg" src="{{ '/images/frontpage/hero-train-bleed.webp' | url }}" alt="">
 		<div class="hero-v2-scrim"></div>
