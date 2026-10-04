@@ -2,4 +2,61 @@ _model: flowpage
 ---
 title: Harrastus
 ---
-body: Tietoa LEGO harrastuksesta
+body:
+
+#### markdown ####
+content:
+### Keräily
+* Settien taikka minifiguurien keräily
+* Tietyn teeman keräily
+* Retro-settien ja avaamattomien settien keräily
+* Settien osto ja myynti muiden harrastajien välillä
+
+#### markdown ####
+content:
+### Rakentaminen
+* Settien rakentaminen virallisten ohjeiden mukaan
+* Settien rakentaminen harrastajien luomien ohjeiden mukaan
+* Settien muokkaus
+* Omien teoksien suunnittelu ja rakentaminen
+* Omien ohjeiden luonti
+* Sopivien osien metsästys
+
+#### markdown ####
+content:
+### Valokuvaaminen
+* Settien ja teoksien esittelyä kuvien avulla
+* Minifiguurien kuvaaminen seikkailemassa ympäri maailmaa
+* LEGO palikoista rakennettujen kohtauksien kuvaaminen
+* Kuva kuvalta rakentuvat stop-motion-animaatiot
+
+#### markdown ####
+content:
+## Aktiviteetit
+
+#### markdown ####
+content:
+### Rakennuskisat
+* Sääntöjen puitteissa pidetyt rakennuskisat ja -haasteet
+* Kisoissa voi olla palkintoja
+
+#### markdown ####
+content:
+### näyttelyt
+* LEGO settien esilletuonti
+* Omien rakennelmien esittely
+* Myyjäiset ja palikoiden vaihdot
+
+#### markdown ####
+content:
+### Yhteisteokset
+* Usean harrastajan yhteisvoimin tehdyt teokset
+* Monta saman teemaista teosta
+* Yhteisteokset, joissa jokaisen rakentamat teokset yhdistetään toisiinsa
+
+#### markdown ####
+content:
+### Tapaamiset
+* Paikallisten harrastajien kokoontumiset
+* Online-miitit
+* Online-chatit ja foorumit

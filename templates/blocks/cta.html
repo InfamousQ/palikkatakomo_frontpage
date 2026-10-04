@@ -1,0 +1,22 @@
+<div class="cta">
+{%- if this.links and this.links.strip() -%}
+{%- for line in this.links.split("\n") -%}
+	{%- if line.strip() -%}
+		{%- set parts = line.split('|') -%}
+		{%- set cta_type = parts[0].strip() -%}
+		{%- set cta_text = parts[1].strip() if parts|length > 1 else "" -%}
+		{%- if cta_type == "discord" -%}
+		<a href="{{ bag('cta-links', 'links', 'discord_invitation') }}">{{ cta_text }}</a>
+		{%- elif cta_type == "forum" -%}
+		<a href="{{ bag('cta-links', 'links', 'forum_join') }}">{{ cta_text }}</a>
+		{%- elif cta_type == "association" -%}
+		<a href="{{ bag('cta-links', 'links', 'association_join') }}">{{ cta_text }}</a>
+		{%- else -%}
+		<!-- Unknown cta_type -->
+		{%- endif -%}
+	{%- endif -%}
+{%- endfor -%}
+{%- else -%}
+	<!-- No URL in this cta section -->
+{%- endif -%}
+</div>

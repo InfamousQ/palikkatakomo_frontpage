@@ -1,136 +1,101 @@
-/** Common properties **/
 :root {
-    --header-color: #2C2B7E;
-    --notice-color: #FFA333;
+	--background-color-primary: #FFFFFF;
+	--background-color-secondary: #E8E8E8;
+	--decor-border-inner: #828282;
+	--decor-border-outer: #b5b5b5;
+	--header-color: #2C2B7E;
+	--notice-color: #FFA333;
+	--content-width: 960px;
 }
 
-/* overall style */
+body {
+	margin: 0;
+	background-color: var(--background-color-secondary);
+}
 
+/* This style ensures that the "borders" around page-container are visible when scrolled to the top or bottom of page */
+html, body {
+	overscroll-behavior-y: none;
+}
+
+div.page-container {
+	background-color: var(--background-color-primary);
+	display: grid;
+	grid-template-rows: auto 1fr auto /* header, content, footer */;
+	max-width: var(--content-width);
+	min-height: 100vh;
+	margin: 0 auto;
+	padding-left: 5em;
+	padding-right: 5em;
+
+	border-left: 3px solid var(--decor-border-inner);
+	border-right: 3px solid var(--decor-border-inner);
+	box-shadow: 
+		-6px 0 0 0 var(--decor-border-outer),
+		6px 0 0 0 var(--decor-border-outer);
+}
+
+/* Navbar */
+
+div.logo {
+	padding-bottom: 0.5em;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1em;
+}
+
+.headerbutton {
+	text-decoration: none;
+	color: white;
+	background-color: var(--header-color);
+	padding: 0.5em;
+	border-radius: 0.4em;
+}
+
+.headerbutton:hover,
+.headerbutton:focus-visible {
+	background-color: var(--notice-color);
+}
+
+main {
+	align-content: center;
+	max-width: 40em;
+}
+
+main h2 {
+	text-align: center;
+}
+
+main img {
+	display: block;
+	margin-inline: auto;
+}
+
+/* Flow */
+
+div.flow-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+/* Font and colors */
 html {
-    font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 /** Header color */
 :is(h1, h2, h3, h4, h5, h6) {
-    color: var(--header-color);
+	color: var(--header-color);
 }
 
 li::marker {
-    color: var(--notice-color);
+	color: var(--notice-color);
 }
-
-body {
-    background-color: #E8E8E8;
-}
-
-#phorum {
-   border-color:#b5b5b5;
-   border-width:3px;
-   border-style:none solid;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-#wrapper {
-   border-color: #828282;
-   border-width: 3px;
-   border-style: none solid;
-   background-color: #FFFFFF;
-}
-
-#header {
-    margin: 0px auto 15px auto;
-    position: relative;
-    border-top: none;
-    color: #CCCCCC;
-}
-
-#footer-plug {
-    text-align: center;
-    font-size: 6pt;
-}
-
-/** HEADER **/
-
-div.nav {
-    display: flex;
-    justify-content:space-around;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-
-    text-align: center;
-    margin-right: 0.1em;
-    margin-bottom: 1em;
-}
-
-.headerbutton {
-    text-decoration: none;
-    background: #211f97;
-    padding: 0.5em;
-    border-radius: 0.4em;
-}
-
-.headerbutton:hover, .dropdownbtn:hover {
-    background: #7372b3;
-}
-
-.headerbutton:visited {
-    color: rgb(255, 255, 255);
-}
-
-.headerbutton:link {
-    color: rgb(255, 255, 255);
-}
-
-.palikkatakomologo {
-    padding-bottom: 3em;
-}
-
-.grid_8 /*footer*/ {
-    margin-top: 5em;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown {
-    float: left;
-    
-}
-
-.dropdownbtn {
-    text-decoration: none;
-    background: #211f97;
-    padding: 0.5em;
-    border-radius: 0.4em;
-    color: rgb(255, 255, 255);
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-    
-  }
-  
-  .dropdown-content {
-    
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    display: block;
-    float: none;
-    color: black;
-    text-decoration: none;
-    padding: 12px 16px;
-    text-align: left;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
