@@ -22,6 +22,7 @@ div.page-container {
 	background-color: var(--background-color-primary);
 	display: grid;
 	grid-template-rows: auto 1fr auto /* header, content, footer */;
+	grid-template-columns: minmax(0, 1fr);
 	max-width: var(--content-width);
 	min-height: 100vh;
 	margin: 0 auto;
@@ -37,11 +38,75 @@ div.page-container {
 
 /* Navbar */
 
-div.logo {
+.site-header {
+	anchor-name: --site-header;
+	padding: 1rem;
+	margin-bottom: 2em;
+}
+
+.site-header .logo {
 	padding-bottom: 0.5em;
 }
 
-nav ul {
+.site-header .logo img {
+	display: block;
+	margin-inline: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+button.open-menu {
+	display: none;
+}
+
+button.open-menu span {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 5px;
+	border-radius: 25px;
+	background-color: var(--header-color);
+	transform: translateY(-50%);
+	transition: 0.3s ease;
+}
+
+button.open-menu span:nth-child(1) {
+	top: 25%;
+}
+
+button.open-menu span:nth-child(3) {
+	top: 75%;
+}
+
+.site-header:has(#main-menu:popover-open) button.open-menu span:nth-child(1) {
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.site-header:has(#main-menu:popover-open) button.open-menu span:nth-child(2) {
+	opacity: 0;
+}
+
+.site-header:has(#main-menu:popover-open) button.open-menu span:nth-child(3) {
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+}
+
+nav#main-menu {
+	position: static;
+	inset: auto;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: visible;
+	color: inherit;
+	background: none;
+}
+
+nav#main-menu ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -51,7 +116,7 @@ nav ul {
 	margin-bottom: 1em;
 }
 
-.headerbutton {
+.nav-button {
 	text-decoration: none;
 	color: white;
 	background-color: var(--header-color);
@@ -59,10 +124,101 @@ nav ul {
 	border-radius: 0.4em;
 }
 
-.headerbutton:hover,
-.headerbutton:focus-visible {
+.nav-button:hover,
+.nav-button:focus-visible {
 	background-color: var(--notice-color);
 }
+
+@media (width > 900px) {
+	nav#main-menu {
+		display: block;
+	}
+}
+
+@media (width <= 900px) {
+	div.page-container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.site-header {
+		padding-block: 0.5em;
+	}
+
+	.site-header .logo img {
+		max-width: min(100%, 300px);
+	}
+
+	button.open-menu {
+		display: block;
+		margin-inline: auto;
+		position: relative;
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		border: 0;
+		background: none;
+		cursor: pointer;
+	}
+
+	nav#main-menu {
+		position: fixed;
+		position-anchor: --site-header;
+		top: 0;
+		top: max(0px, anchor(bottom));
+		right: 0;
+		bottom: 0;
+		width: min(85%, 450px);
+		overflow-y: auto;
+		background-color: var(--background-color-primary);
+		box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+		font-size: 1.5em;
+		transform: translateX(100%);
+		transition:
+			transform 0.3s ease,
+			display 0.3s allow-discrete,
+			overlay 0.3s allow-discrete;
+	}
+
+	nav#main-menu:popover-open {
+		transform: none;
+	}
+
+	@starting-style {
+		nav#main-menu:popover-open {
+			transform: translateX(100%);
+		}
+	}
+
+	nav#main-menu ul {
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-button {
+		display: block;
+		padding: 0.75em 1.5em;
+		border-radius: 0;
+		border-bottom: 1px solid var(--decor-border-inner);
+		background-color: transparent;
+		color: var(--header-color);
+	}
+
+	.language-switch {
+		display: flex;
+		align-items: center;
+		gap: 0.25em;
+		padding: 0.75em 1.5em;
+	}
+
+	 .language-switch .nav-button {
+		padding: 0.25em 0.5em;
+		border-bottom: 0;
+	
+	}
+}
+
 
 main {
 	align-content: center;
@@ -75,6 +231,8 @@ main h2 {
 
 main img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 	margin-inline: auto;
 }
 

@@ -9,11 +9,14 @@
 
 <body>
 	<div class="page-container">
-		<header>
+		<header class="site-header">
 			<div class="logo">
-				<a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}" style="display:block; margin-left:auto; margin-right:auto"></a>
+				<a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}"></a>
 			</div>
-			<nav>
+			<button class="open-menu" popovertarget="main-menu" aria-label="{{ 'Menu' if this.alt == 'en' else 'Valikko' }}">
+				<span></span><span></span><span></span>
+			</button>
+			<nav id="main-menu" popover>
 				<ul>
 		{#- Loop through all items defined in databags/nav.ini -#}
 		{%- for key, item in bag('main-nav').items() -%}
@@ -35,14 +38,14 @@
 			{%- endif -%}
 			{#- 3. Render the list item -#}
 					<li>
-						<a class="headerbutton" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+						<a class="nav-button" href="{{ nav_url }}" {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
 						{{ nav_title }}
 						</a>
 					</li>
 		{%- endfor -%}
-					<li>
-						{% if this.alt == 'fi' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='fi')}}">FI</a>{% if this.alt == 'fi' %}</b>{% endif %}&nbsp;|&nbsp;
-						{% if this.alt == 'en' %}<b>{% endif %}<a class="headerbutton" href="{{ '.' | url(alt='en')}}">EN</a>{% if this.alt == 'en' %}</b>{% endif %}
+					<li class="language-switch">
+						{% if this.alt == 'fi' %}<b>{% endif %}<a class="nav-button" href="{{ '.' | url(alt='fi')}}">FI</a>{% if this.alt == 'fi' %}</b>{% endif %}&nbsp;|&nbsp;
+						{% if this.alt == 'en' %}<b>{% endif %}<a class="nav-button" href="{{ '.' | url(alt='en')}}">EN</a>{% if this.alt == 'en' %}</b>{% endif %}
 					</li>
 				</ul>
 			</nav>
