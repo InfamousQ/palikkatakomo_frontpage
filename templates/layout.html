@@ -10,12 +10,17 @@
 <body>
 	<div class="page-container">
 		<header class="site-header">
-			<div class="logo">
-				<a rel="home" href="https://www.palikkatakomo.org"><img width="672" height="112" alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}"></a>
+			<div class="navbar">
+				<a rel="home" href="https://www.palikkatakomo.org"><img alt="Palikkatakomo" src="{{ '/images/palikkatakomo_logo.jpg'|url }}"></a>
+				<button class="open-menu" popovertarget="main-menu" aria-label="{{ 'Menu' if this.alt == 'en' else 'Valikko' }}">
+					{{ 'Menu' if this.alt == 'en' else 'Valikko' }}
+					<svg class="hamburger" viewBox="0 0 24 24" aria-hidden="true">
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
 			</div>
-			<button class="open-menu" popovertarget="main-menu" aria-label="{{ 'Menu' if this.alt == 'en' else 'Valikko' }}">
-				<span></span><span></span><span></span>
-			</button>
 			<nav id="main-menu" popover>
 				<ul>
 		{#- Loop through all items defined in databags/nav.ini -#}
